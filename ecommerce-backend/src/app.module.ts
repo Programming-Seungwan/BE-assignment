@@ -6,15 +6,24 @@ import * as Joi from 'joi';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './user/user.module';
 import { User } from './user/entity/user.entity';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
       validationSchema: Joi.object({
-        PORT: Joi.number()
+        APP_PORT: Joi.number()
           .valid(3000 | 3001)
           .required(),
+        ENV: Joi.string().valid('dev', 'production').required(),
+        DB_TYPE: Joi.string().valid('mysql').required(),
+        DB_HOST: Joi.string().required(),
+        DB_PORT: Joi.number().valid(3306).required(),
+        DB_USERNAME: Joi.string().valid('seungwan').required(),
+        DB_PASSWORD: Joi.string().required(),
+        DB_DATABASE: Joi.string().required(),
+        HASH_ROUNDS: Joi.number().required(),
       }),
     }),
     TypeOrmModule.forRootAsync({
@@ -31,6 +40,7 @@ import { User } from './user/entity/user.entity';
       inject: [ConfigService],
     }),
     UserModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
