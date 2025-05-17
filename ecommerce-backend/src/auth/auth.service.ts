@@ -1,4 +1,8 @@
-import { Injectable, ConflictException } from '@nestjs/common';
+import {
+  Injectable,
+  ConflictException,
+  BadRequestException,
+} from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { CreateUserDto } from 'src/user/dto/create-user.dto';
 import { User } from 'src/user/entity/user.entity';
@@ -14,6 +18,24 @@ export class AuthService {
     private readonly userRepository: Repository<User>,
     private readonly configService: ConfigService
   ) {}
+
+  async authenticate(email: string, passpord: string) {
+    const user = await this.userRepository.findOne({ where: { email } });
+
+    if (!user) {
+      throw new BadRequestException(
+        `${email} 이메일을 가진 사용자가 없습니다!`
+      );
+    }
+
+    const isPasswordValid = await bcrypt.compareSync(passpord, user.password);
+
+    if (!isPasswordValid) {
+      throw new BadRequestException('잘못된 이메일 정보입니다!');
+    }
+
+    return user;
+  }
 
   async register(createUserDto: CreateUserDto) {
     const { email, nickName, password } = createUserDto;
