@@ -47,6 +47,7 @@ const RAW_RUNTIME_STATE =
           ["@types/express", "npm:5.0.2"],\
           ["@types/jest", "npm:29.5.14"],\
           ["@types/node", "npm:22.15.18"],\
+          ["@types/passport", "npm:0.4.7"],\
           ["@types/passport-local", "npm:1.0.38"],\
           ["@types/supertest", "npm:6.0.3"],\
           ["bcrypt", "npm:6.0.0"],\
@@ -60,6 +61,7 @@ const RAW_RUNTIME_STATE =
           ["jest", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:29.7.0"],\
           ["joi", "npm:17.13.3"],\
           ["mysql2", "npm:3.14.1"],\
+          ["passport", "npm:0.7.0"],\
           ["passport-local", "npm:1.0.0"],\
           ["prettier", "npm:3.5.3"],\
           ["reflect-metadata", "npm:0.2.2"],\
@@ -2355,8 +2357,8 @@ const RAW_RUNTIME_STATE =
           ["@nestjs/common", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.1.1"],\
           ["@nestjs/passport", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.0.5"],\
           ["@types/nestjs__common", null],\
-          ["@types/passport", null],\
-          ["passport", null]\
+          ["@types/passport", "npm:0.4.7"],\
+          ["passport", "npm:0.7.0"]\
         ],\
         "packagePeers": [\
           "@nestjs/common",\
@@ -3186,6 +3188,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/passport", [\
+      ["npm:0.4.7", {\
+        "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/@types-passport-npm-0.4.7-41ee4f6974-10c0.zip/node_modules/@types/passport/",\
+        "packageDependencies": [\
+          ["@types/express", "npm:5.0.2"],\
+          ["@types/passport", "npm:0.4.7"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:1.0.17", {\
         "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/@types-passport-npm-1.0.17-f7599941ec-10c0.zip/node_modules/@types/passport/",\
         "packageDependencies": [\
@@ -5344,6 +5354,7 @@ const RAW_RUNTIME_STATE =
           ["@types/express", "npm:5.0.2"],\
           ["@types/jest", "npm:29.5.14"],\
           ["@types/node", "npm:22.15.18"],\
+          ["@types/passport", "npm:0.4.7"],\
           ["@types/passport-local", "npm:1.0.38"],\
           ["@types/supertest", "npm:6.0.3"],\
           ["bcrypt", "npm:6.0.0"],\
@@ -5357,6 +5368,7 @@ const RAW_RUNTIME_STATE =
           ["jest", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:29.7.0"],\
           ["joi", "npm:17.13.3"],\
           ["mysql2", "npm:3.14.1"],\
+          ["passport", "npm:0.7.0"],\
           ["passport-local", "npm:1.0.0"],\
           ["prettier", "npm:3.5.3"],\
           ["reflect-metadata", "npm:0.2.2"],\
@@ -8794,6 +8806,18 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["passport", [\
+      ["npm:0.7.0", {\
+        "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/passport-npm-0.7.0-df02531736-10c0.zip/node_modules/passport/",\
+        "packageDependencies": [\
+          ["passport", "npm:0.7.0"],\
+          ["passport-strategy", "npm:1.0.0"],\
+          ["pause", "npm:0.0.1"],\
+          ["utils-merge", "npm:1.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["passport-local", [\
       ["npm:1.0.0", {\
         "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/passport-local-npm-1.0.0-ed89961a0c-10c0.zip/node_modules/passport-local/",\
@@ -8883,6 +8907,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/path-type-npm-4.0.0-10d47fc86a-10c0.zip/node_modules/path-type/",\
         "packageDependencies": [\
           ["path-type", "npm:4.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["pause", [\
+      ["npm:0.0.1", {\
+        "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/pause-npm-0.0.1-0c421a299d-10c0.zip/node_modules/pause/",\
+        "packageDependencies": [\
+          ["pause", "npm:0.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -10711,6 +10744,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/util-deprecate-npm-1.0.2-e3fe1a219c-10c0.zip/node_modules/util-deprecate/",\
         "packageDependencies": [\
           ["util-deprecate", "npm:1.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["utils-merge", [\
+      ["npm:1.0.1", {\
+        "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/utils-merge-npm-1.0.1-363bbdfbca-10c0.zip/node_modules/utils-merge/",\
+        "packageDependencies": [\
+          ["utils-merge", "npm:1.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\

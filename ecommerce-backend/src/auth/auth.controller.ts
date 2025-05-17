@@ -3,10 +3,13 @@ import {
   ClassSerializerInterceptor,
   Controller,
   Post,
+  Request,
+  UseGuards,
   UseInterceptors,
 } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { CreateUserDto } from 'src/user/dto/create-user.dto';
+import { LocalAuthGuard } from './strategy/local.strategy';
 import { LoginDto } from './dto/login.dto';
 
 @Controller('auth')
@@ -20,7 +23,8 @@ export class AuthController {
   }
 
   @Post('/login')
-  login(@Body() loginUserDto: LoginDto) {
-    return this.authService.login(loginUserDto);
+  @UseGuards(LocalAuthGuard)
+  login(@Request() req: LoginDto) {
+    return this.authService.login(req);
   }
 }
