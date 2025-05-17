@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ConfigModule } from '@nestjs/config';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import * as Joi from 'joi';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   imports: [
@@ -13,6 +14,19 @@ import * as Joi from 'joi';
           .valid(3000 | 3001)
           .required(),
       }),
+    }),
+    TypeOrmModule.forRootAsync({
+      useFactory: (configService: ConfigService) => ({
+        type: configService.get<string>('DB_TYPE') as 'mysql',
+        host: configService.get<string>('DB_HOST'),
+        port: configService.get<number>('DB_PORT'),
+        username: configService.get<string>('DB_USERNAME'),
+        password: configService.get<string>('DB_PASSWORD'),
+        database: configService.get<string>('DB_DATABASE'),
+        synchronize: true,
+        entities: [], // 엔티티로 테이블이 생길 떄마다 여기에 추가해주면 됨
+      }),
+      inject: [ConfigService],
     }),
   ],
   controllers: [AppController],
