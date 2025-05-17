@@ -45,6 +45,8 @@ const RAW_RUNTIME_STATE =
           ["@types/jest", "npm:29.5.14"],\
           ["@types/node", "npm:22.15.18"],\
           ["@types/supertest", "npm:6.0.3"],\
+          ["class-transformer", "npm:0.5.1"],\
+          ["class-validator", "npm:0.14.2"],\
           ["ecommerce-backend", "workspace:."],\
           ["eslint", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:9.27.0"],\
           ["eslint-config-prettier", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:10.1.5"],\
@@ -2175,8 +2177,8 @@ const RAW_RUNTIME_STATE =
           ["@types/class-validator", null],\
           ["@types/reflect-metadata", null],\
           ["@types/rxjs", null],\
-          ["class-transformer", null],\
-          ["class-validator", null],\
+          ["class-transformer", "npm:0.5.1"],\
+          ["class-validator", "npm:0.14.2"],\
           ["file-type", "npm:20.5.0"],\
           ["iterare", "npm:1.2.1"],\
           ["load-esm", "npm:1.0.2"],\
@@ -2229,14 +2231,14 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@nestjs/core", [\
       ["npm:11.1.1", {\
-        "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/@nestjs-core-npm-11.1.1-3aa05fef4d-10c0.zip/node_modules/@nestjs/core/",\
+        "packageLocation": "./.yarn/unplugged/@nestjs-core-virtual-4a236e09fc/node_modules/@nestjs/core/",\
         "packageDependencies": [\
           ["@nestjs/core", "npm:11.1.1"]\
         ],\
         "linkType": "SOFT"\
       }],\
       ["virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.1.1", {\
-        "packageLocation": "./.yarn/__virtual__/@nestjs-core-virtual-4a236e09fc/5/Users/seungwankim/.yarn/berry/cache/@nestjs-core-npm-11.1.1-3aa05fef4d-10c0.zip/node_modules/@nestjs/core/",\
+        "packageLocation": "./.yarn/unplugged/@nestjs-core-virtual-4a236e09fc/node_modules/@nestjs/core/",\
         "packageDependencies": [\
           ["@nestjs/common", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.1.1"],\
           ["@nestjs/core", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.1.1"],\
@@ -2292,8 +2294,8 @@ const RAW_RUNTIME_STATE =
           ["@types/class-validator", null],\
           ["@types/nestjs__common", null],\
           ["@types/reflect-metadata", null],\
-          ["class-transformer", null],\
-          ["class-validator", null],\
+          ["class-transformer", "npm:0.5.1"],\
+          ["class-validator", "npm:0.14.2"],\
           ["reflect-metadata", "npm:0.2.2"]\
         ],\
         "packagePeers": [\
@@ -2663,14 +2665,14 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["@swc/core", [\
       ["npm:1.11.24", {\
-        "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/@swc-core-npm-1.11.24-83b93aa0bd-10c0.zip/node_modules/@swc/core/",\
+        "packageLocation": "./.yarn/unplugged/@swc-core-virtual-bfbf78b986/node_modules/@swc/core/",\
         "packageDependencies": [\
           ["@swc/core", "npm:1.11.24"]\
         ],\
         "linkType": "SOFT"\
       }],\
       ["virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:1.11.24", {\
-        "packageLocation": "./.yarn/__virtual__/@swc-core-virtual-bfbf78b986/5/Users/seungwankim/.yarn/berry/cache/@swc-core-npm-1.11.24-83b93aa0bd-10c0.zip/node_modules/@swc/core/",\
+        "packageLocation": "./.yarn/unplugged/@swc-core-virtual-bfbf78b986/node_modules/@swc/core/",\
         "packageDependencies": [\
           ["@swc/core", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:1.11.24"],\
           ["@swc/core-darwin-arm64", "npm:1.11.24"],\
@@ -3177,6 +3179,15 @@ const RAW_RUNTIME_STATE =
           ["@types/methods", "npm:1.1.4"],\
           ["@types/superagent", "npm:8.1.9"],\
           ["@types/supertest", "npm:6.0.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/validator", [\
+      ["npm:13.15.0", {\
+        "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/@types-validator-npm-13.15.0-4f9b0b87d2-10c0.zip/node_modules/@types/validator/",\
+        "packageDependencies": [\
+          ["@types/validator", "npm:13.15.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4592,6 +4603,27 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["class-transformer", [\
+      ["npm:0.5.1", {\
+        "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/class-transformer-npm-0.5.1-96b5161e6c-10c0.zip/node_modules/class-transformer/",\
+        "packageDependencies": [\
+          ["class-transformer", "npm:0.5.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["class-validator", [\
+      ["npm:0.14.2", {\
+        "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/class-validator-npm-0.14.2-e722f4bf99-10c0.zip/node_modules/class-validator/",\
+        "packageDependencies": [\
+          ["@types/validator", "npm:13.15.0"],\
+          ["class-validator", "npm:0.14.2"],\
+          ["libphonenumber-js", "npm:1.12.8"],\
+          ["validator", "npm:13.15.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["cli-cursor", [\
       ["npm:3.1.0", {\
         "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/cli-cursor-npm-3.1.0-fee1e46b5e-10c0.zip/node_modules/cli-cursor/",\
@@ -5170,6 +5202,8 @@ const RAW_RUNTIME_STATE =
           ["@types/jest", "npm:29.5.14"],\
           ["@types/node", "npm:22.15.18"],\
           ["@types/supertest", "npm:6.0.3"],\
+          ["class-transformer", "npm:0.5.1"],\
+          ["class-validator", "npm:0.14.2"],\
           ["ecommerce-backend", "workspace:."],\
           ["eslint", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:9.27.0"],\
           ["eslint-config-prettier", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:10.1.5"],\
@@ -7610,6 +7644,15 @@ const RAW_RUNTIME_STATE =
           ["levn", "npm:0.4.1"],\
           ["prelude-ls", "npm:1.2.1"],\
           ["type-check", "npm:0.4.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["libphonenumber-js", [\
+      ["npm:1.12.8", {\
+        "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/libphonenumber-js-npm-1.12.8-806f5fa775-10c0.zip/node_modules/libphonenumber-js/",\
+        "packageDependencies": [\
+          ["libphonenumber-js", "npm:1.12.8"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -10409,6 +10452,15 @@ const RAW_RUNTIME_STATE =
           ["@types/istanbul-lib-coverage", "npm:2.0.6"],\
           ["convert-source-map", "npm:2.0.0"],\
           ["v8-to-istanbul", "npm:9.3.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["validator", [\
+      ["npm:13.15.0", {\
+        "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/validator-npm-13.15.0-b048a51909-10c0.zip/node_modules/validator/",\
+        "packageDependencies": [\
+          ["validator", "npm:13.15.0"]\
         ],\
         "linkType": "HARD"\
       }]\
