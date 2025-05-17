@@ -7,6 +7,7 @@ import {
 } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { CreateUserDto } from 'src/user/dto/create-user.dto';
+import { LoginDto } from './dto/login.dto';
 
 @Controller('auth')
 @UseInterceptors(ClassSerializerInterceptor)
@@ -16,5 +17,10 @@ export class AuthController {
   @Post('/register')
   registerUser(@Body() createUserDto: CreateUserDto) {
     return this.authService.register(createUserDto);
+  }
+
+  @Post('/login')
+  login(@Body() loginUserDto: LoginDto) {
+    return this.authService.login(loginUserDto);
   }
 }

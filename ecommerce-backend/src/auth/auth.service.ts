@@ -5,6 +5,7 @@ import { User } from 'src/user/entity/user.entity';
 import { Repository } from 'typeorm';
 import * as bcrypt from 'bcrypt';
 import { ConfigService } from '@nestjs/config';
+import { LoginDto } from './dto/login.dto';
 
 @Injectable()
 export class AuthService {
@@ -44,4 +45,7 @@ export class AuthService {
       },
     });
   }
+
+  // passport-local을 이용해서 사용자의 이름과 패스워드를 확인한 바를 기반으로 사용자를 만들어주면 된다.
+  login(loginUserDto: LoginDto) {}
 }

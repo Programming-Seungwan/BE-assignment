@@ -36,6 +36,7 @@ const RAW_RUNTIME_STATE =
           ["@nestjs/core", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.1.1"],\
           ["@nestjs/jwt", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.0.0"],\
           ["@nestjs/mapped-types", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:2.1.0"],\
+          ["@nestjs/passport", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.0.5"],\
           ["@nestjs/platform-express", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.1.1"],\
           ["@nestjs/schematics", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.0.5"],\
           ["@nestjs/testing", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.1.1"],\
@@ -46,6 +47,7 @@ const RAW_RUNTIME_STATE =
           ["@types/express", "npm:5.0.2"],\
           ["@types/jest", "npm:29.5.14"],\
           ["@types/node", "npm:22.15.18"],\
+          ["@types/passport-local", "npm:1.0.38"],\
           ["@types/supertest", "npm:6.0.3"],\
           ["bcrypt", "npm:6.0.0"],\
           ["class-transformer", "npm:0.5.1"],\
@@ -58,6 +60,7 @@ const RAW_RUNTIME_STATE =
           ["jest", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:29.7.0"],\
           ["joi", "npm:17.13.3"],\
           ["mysql2", "npm:3.14.1"],\
+          ["passport-local", "npm:1.0.0"],\
           ["prettier", "npm:3.5.3"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["rxjs", "npm:7.8.2"],\
@@ -2338,6 +2341,32 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@nestjs/passport", [\
+      ["npm:11.0.5", {\
+        "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/@nestjs-passport-npm-11.0.5-7176f1ced2-10c0.zip/node_modules/@nestjs/passport/",\
+        "packageDependencies": [\
+          ["@nestjs/passport", "npm:11.0.5"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.0.5", {\
+        "packageLocation": "./.yarn/__virtual__/@nestjs-passport-virtual-428be95607/5/Users/seungwankim/.yarn/berry/cache/@nestjs-passport-npm-11.0.5-7176f1ced2-10c0.zip/node_modules/@nestjs/passport/",\
+        "packageDependencies": [\
+          ["@nestjs/common", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.1.1"],\
+          ["@nestjs/passport", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.0.5"],\
+          ["@types/nestjs__common", null],\
+          ["@types/passport", null],\
+          ["passport", null]\
+        ],\
+        "packagePeers": [\
+          "@nestjs/common",\
+          "@types/nestjs__common",\
+          "@types/passport",\
+          "passport"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@nestjs/platform-express", [\
       ["npm:11.1.1", {\
         "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/@nestjs-platform-express-npm-11.1.1-656d22e643-10c0.zip/node_modules/@nestjs/platform-express/",\
@@ -3152,6 +3181,39 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/node", "npm:22.15.18"],\
           ["undici-types", "npm:6.21.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/passport", [\
+      ["npm:1.0.17", {\
+        "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/@types-passport-npm-1.0.17-f7599941ec-10c0.zip/node_modules/@types/passport/",\
+        "packageDependencies": [\
+          ["@types/express", "npm:5.0.2"],\
+          ["@types/passport", "npm:1.0.17"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/passport-local", [\
+      ["npm:1.0.38", {\
+        "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/@types-passport-local-npm-1.0.38-e5beccb1f8-10c0.zip/node_modules/@types/passport-local/",\
+        "packageDependencies": [\
+          ["@types/express", "npm:5.0.2"],\
+          ["@types/passport", "npm:1.0.17"],\
+          ["@types/passport-local", "npm:1.0.38"],\
+          ["@types/passport-strategy", "npm:0.2.38"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/passport-strategy", [\
+      ["npm:0.2.38", {\
+        "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/@types-passport-strategy-npm-0.2.38-6460f7e728-10c0.zip/node_modules/@types/passport-strategy/",\
+        "packageDependencies": [\
+          ["@types/express", "npm:5.0.2"],\
+          ["@types/passport", "npm:1.0.17"],\
+          ["@types/passport-strategy", "npm:0.2.38"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5271,6 +5333,7 @@ const RAW_RUNTIME_STATE =
           ["@nestjs/core", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.1.1"],\
           ["@nestjs/jwt", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.0.0"],\
           ["@nestjs/mapped-types", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:2.1.0"],\
+          ["@nestjs/passport", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.0.5"],\
           ["@nestjs/platform-express", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.1.1"],\
           ["@nestjs/schematics", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.0.5"],\
           ["@nestjs/testing", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:11.1.1"],\
@@ -5281,6 +5344,7 @@ const RAW_RUNTIME_STATE =
           ["@types/express", "npm:5.0.2"],\
           ["@types/jest", "npm:29.5.14"],\
           ["@types/node", "npm:22.15.18"],\
+          ["@types/passport-local", "npm:1.0.38"],\
           ["@types/supertest", "npm:6.0.3"],\
           ["bcrypt", "npm:6.0.0"],\
           ["class-transformer", "npm:0.5.1"],\
@@ -5293,6 +5357,7 @@ const RAW_RUNTIME_STATE =
           ["jest", "virtual:f1de081f2f43a4423b8d899fc4cb5e96e36a0c285e661fae6e43ef89a97d33fe499704cd56085e11c52316f00885ba6909b67e36c9df7a0aa0d9e21886f66195#npm:29.7.0"],\
           ["joi", "npm:17.13.3"],\
           ["mysql2", "npm:3.14.1"],\
+          ["passport-local", "npm:1.0.0"],\
           ["prettier", "npm:3.5.3"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["rxjs", "npm:7.8.2"],\
@@ -8725,6 +8790,25 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/parseurl-npm-1.3.3-1542397e00-10c0.zip/node_modules/parseurl/",\
         "packageDependencies": [\
           ["parseurl", "npm:1.3.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["passport-local", [\
+      ["npm:1.0.0", {\
+        "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/passport-local-npm-1.0.0-ed89961a0c-10c0.zip/node_modules/passport-local/",\
+        "packageDependencies": [\
+          ["passport-local", "npm:1.0.0"],\
+          ["passport-strategy", "npm:1.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["passport-strategy", [\
+      ["npm:1.0.0", {\
+        "packageLocation": "../../../../Users/seungwankim/.yarn/berry/cache/passport-strategy-npm-1.0.0-5648a82a66-10c0.zip/node_modules/passport-strategy/",\
+        "packageDependencies": [\
+          ["passport-strategy", "npm:1.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
