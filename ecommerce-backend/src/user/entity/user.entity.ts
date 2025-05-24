@@ -1,6 +1,14 @@
 import { Exclude, Expose } from 'class-transformer';
 import { BaseEntity } from 'src/common/base.entity';
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Product } from 'src/product/entities/product.entity';
+
+import {
+  Column,
+  Entity,
+  JoinTable,
+  ManyToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 @Entity()
 export class User extends BaseEntity {
@@ -19,4 +27,8 @@ export class User extends BaseEntity {
   @Column()
   @Exclude()
   password: string;
+
+  @ManyToMany(() => Product, (product) => product.users)
+  @JoinTable()
+  products: Product[];
 }
