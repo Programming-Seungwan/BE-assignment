@@ -1,26 +1,73 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 
+interface User {
+  id: number;
+  name: string;
+  email: string;
+}
+
 @Injectable()
 export class UserService {
+  #users: User[] = [];
+  #idCounter: number = 1;
+
   create(createUserDto: CreateUserDto) {
-    return 'This action adds a new user';
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(createUserDto.email) || !createUserDto.name) {
+      throw new BadRequestException('유효하지 않은 이메일 형식입니다.');
+    }
+
+    const newUser: User = {
+      id: this.#idCounter++,
+      name: createUserDto.name,
+      email: createUserDto.email,
+    };
+
+    this.#users.push(newUser);
+    return newUser;
   }
 
   findAll() {
-    return `This action returns all user`;
+    return this.#users;
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} user`;
+    const user = this.#users.find((user) => user.id === id);
+
+    if (!user) {
+      throw new BadRequestException('사용자를 찾을 수 없습니다.');
+    }
+
+    return user;
   }
 
   update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
+    const userIndex = this.#users.findIndex((user) => user.id === id);
+
+    if (userIndex === -1) {
+      throw new BadRequestException('사용자를 찾을 수 없습니다.');
+    }
+
+    const updatedUser = {
+      ...this.#users[userIndex],
+      ...updateUserDto,
+    };
+
+    this.#users[userIndex] = updatedUser;
+    return updatedUser;
   }
 
   remove(id: number) {
-    return `This action removes a #${id} user`;
+    const userIndex = this.#users.findIndex((user) => user.id === id);
+
+    if (userIndex === -1) {
+      throw new BadRequestException('사용자를 찾을 수 없습니다.');
+    }
+
+    const removedUser = this.#users.splice(userIndex, 1)[0];
+    return removedUser;
   }
 }
