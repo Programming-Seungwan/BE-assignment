@@ -10,8 +10,8 @@ interface User {
 
 @Injectable()
 export class UserService {
-  #users: User[] = [];
-  #idCounter: number = 1;
+  #users: User[] = [{ id: 1, name: 'seungwan', email: 'swsj2369@hanmail.net' }];
+  #idCounter: number = 2;
 
   create(createUserDto: CreateUserDto) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
